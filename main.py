@@ -14,3 +14,6 @@ sweep = pytta.generate.sweep()
 
 #%% Tocando sweep
 sweep.play()
+
+#%% Nova funcionalidade
+print(sweep.channelName)
