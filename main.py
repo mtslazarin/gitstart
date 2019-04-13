@@ -15,9 +15,12 @@ sweep = pytta.generate.sweep()
 #%% Tocando sweep
 sweep.play()
 
+
 #%% Time plot
 sweep.plot_time()
 ## SDDS lAZA <3<3
 #%% Frequency plot
 sweep.plot_freq()
 
+#%% Nova funcionalidade
+print(sweep.channelName)
