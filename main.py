@@ -14,3 +14,6 @@ sweep = pytta.generate.sweep()
 
 #%% Tocando sweep
 sweep.play()
+
+#%%
+sweep.plot_time()
