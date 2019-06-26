@@ -7,7 +7,7 @@ print("Olá, acústicos!")
 
 # %% 1.1 Data types
 
-print(type(1), type(1.1), type('oi'), type({'key': 'item'}), type((1)), type([1]))
+print(type(1), type(1.1), type('oi'), type({'key': 'item'}), type((1, )), type([1]))
 
 # %% 1.2 Loops e condicionais
 
@@ -16,7 +16,7 @@ mlist = [1, 2, 3, 4, 5, 6]
 for num in mlist:
     if num < 3:
         print('menor que', 3)
-    elif num >= 3 and < 5:
+    elif num >= 3 and num < 5:
         print('entre', 3, 'e', 5)
     else:
         print('maior que 5')
@@ -35,6 +35,7 @@ a = 1
 b = 2
 c = 2*a + b
 c /= 2
+print(a, b, c)
 
 texto = 'Oi, meu nome é Python.\nSou uma linguagem muito legal.'
 lstxt = texto.replace('\n',' ').split(' ')
@@ -72,7 +73,7 @@ class Estudante(Pessoa):
 class Trabalhador(Pessoa):
     def __init__(self, nome, idade, cargo):
         super().__init__(nome, idade)
-        self.especialidade = especialidade
+        self.cargo = cargo
         return
 
 
@@ -160,6 +161,11 @@ print("As idades são:", mae.idade,',', eu.idade, 'e', ele.idade)
 """
     Como o próprio nome diz, é a habilidade que uma classe tem de HERDAR atributos e métodos de uma outra
     classe, chamada classe superior, ou superclasse.
+
+    Como no exemplo da Pessoa, Estudante, Trabalhador, a Estudante e a Trabalhador HERDARAM os atributos
+    .nome e .idade da Pessoa. Isso define que a classe HERDEIRA, ou subclasse é TAMBÉM uma Instancia da
+    superclasse.
+
 """
 
 class Foo:
@@ -169,14 +175,7 @@ class Bar(Foo):
     pass
 
 mybar = Bar()
-isinstance(mybar, Foo)
-
-
-"""
-    Como no exemplo da Pessoa, Estudante, Trabalhador, a Estudante e a Trabalhador HERDARAM os atributos
-    .nome e .idade da Pessoa. Isso define que a classe HERDEIRA, ou subclasse é TAMBÉM uma Instancia da
-    superclasse.
-"""
+print(isinstance(mybar, Foo))
 
 
 # %% COMPOSIÇÃO
@@ -230,7 +229,7 @@ class Carrinho(Brinquedo):
         print('VRRUM! VRRUUUMM!!!')
 
 
-class Dinossuaro(Brinquedo):
+class Dinossauro(Brinquedo):
     def brincar(self):
         print('GRRAUR!! ROARR!!')
 
@@ -241,7 +240,7 @@ dino = Dinossauro()
 car.brincar()
 dino.brincar()
 
-
+# %%
 class NaoBrinquedo:
     def __init__(self, nome):
         self.nome = nome
@@ -260,6 +259,7 @@ class Bebe(Pessoa):
 
     def brincar_com(self):
         self.brincar()
+        print("com a", self.brinquedo.nome)
         self.brinquedo.brincar()
         return
 
@@ -313,8 +313,10 @@ class Pessoa:
 
 pess = Pessoa("Guto", 22)
 pess.nome = 2
+print(pess.nome)
 
-
+pess.nome = 'Au'
+print(pess.nome)
 # %% PARTE 5
 
 # Um exemplo prático! Vamos CODAR???
