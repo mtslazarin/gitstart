@@ -1,15 +1,15 @@
 # coding: -*- utf-8 -*-
 
 # Parte 1
-# Introdução  ao Python
+# %% Introdução  ao Python
 
 print("Olá, acústicos!")
 
-# 1.1 Data types
+# %% 1.1 Data types
 
 print(type(1), type(1.1), type('oi'), type({'key': 'item'}), type((1)), type([1]))
 
-# 1.2 Loops e condicionais
+# %% 1.2 Loops e condicionais
 
 mlist = [1, 2, 3, 4, 5, 6]
 
@@ -21,13 +21,14 @@ for num in mlist:
     else:
         print('maior que 5')
 
-# 1.3 Funções
+# %% 1.3 Funções
 
 def foo(bar):
     print(bar)
 
+foo("baz")
 
-# Parte 2
+# %% Parte 2
 # Paradigmas de programação
 
 a = 1
@@ -37,8 +38,10 @@ c /= 2
 
 texto = 'Oi, meu nome é Python.\nSou uma linguagem muito legal.'
 lstxt = texto.replace('\n',' ').split(' ')
+print(texto)
+print(lstxt)
 
-# 2.1 Programação orientada ao objeto
+# %% 2.1 Programação orientada ao objeto
 
 class Foo:
     def bar(self):
@@ -49,7 +52,7 @@ fu = Foo()
 fu.bar()
 
 
-# Parte 3, mas peraê
+# %% Parte 3, mas peraê
 # Exemplo básico
 
 class Pessoa:
@@ -81,7 +84,7 @@ print("As pessoas criadas foram:", mae.nome,',',eu.nome,'e',ele.nome)
 print("As idades são:", mae.idade,',', eu.idade, 'e', ele.idade)
 
 
-# 3.1 Classes
+# %% 3.1 Classes
 """
     São caracterizadores, definem novos tipos de dados, guardam uma série de atributos e métodos
     que caracterizam seu uso. Podemos pensar como definições de conceitos. Como Carro, Moto, Cadeira
@@ -89,7 +92,7 @@ print("As idades são:", mae.idade,',', eu.idade, 'e', ele.idade)
     coisa, mas não define características particulares. As particularidades são pertencentes ao OBJETO.
 """
 
-# 3.1.1 Objetos, ou Instâncias
+# %% 3.1.1 Objetos, ou Instâncias
 """
     Existem diversos OBJETOS que são parte de cada uma das classes citadas anteriormente.
     Vamos pegar o exemplo das CADEIRAS. Existe essa cadeira, aquela cadeira, a tua cadeira.
@@ -98,7 +101,7 @@ print("As idades são:", mae.idade,',', eu.idade, 'e', ele.idade)
     determinada classe de INSTÂNCIA da classe, do inglês INSTANCE.
 """
 
-# 3.2 Atributos
+# %% 3.2 Atributos
 """
     São valores, ou conjuntos de valores (equivalente a variáveis) que pertêncem ao objeto e definem
     particularidades. Vamos usar o exemplo de uma instancia da classe COMPUTADOR:
@@ -119,7 +122,7 @@ print("As idades são:", mae.idade,',', eu.idade, 'e', ele.idade)
     diferentes valores.
 """
 
-# 3.3 Métodos
+# %% 3.3 Métodos
 """
     Métodos são o equivalente as ações que podem ser realizadas com um objeto. Vamos pensar num objeto da
     classe COMPUTADOR, digamos MeuPC, vamos pensar agora em ações que posso realizar com MeuPC:
@@ -146,14 +149,14 @@ print("As idades são:", mae.idade,',', eu.idade, 'e', ele.idade)
 """
 
 
-# Parte 4 - HERANÇA, COMPOSIÇÃO, POLIMORFISMO E ENCAPSULAMENTO
+# %% Parte 4 - HERANÇA, COMPOSIÇÃO, POLIMORFISMO E ENCAPSULAMENTO
 
 """
     Existem algumas práticas que definem a programação orientada ao objeto, que são Herança, Composição,
     Polimorfismo e Encapsulamento.
 """
 
-# HERANÇA
+# %% HERANÇA
 """
     Como o próprio nome diz, é a habilidade que uma classe tem de HERDAR atributos e métodos de uma outra
     classe, chamada classe superior, ou superclasse.
@@ -176,7 +179,7 @@ isinstance(mybar, Foo)
 """
 
 
-# COMPOSIÇÃO
+# %% COMPOSIÇÃO
 """
     Muitas vezes uma classe depende de outras classes, ou de objetos de outras classes, para se constituir.
     Pensemos num Carro, este possui:
@@ -210,7 +213,7 @@ isinstance(mybar, Foo)
 """
 
 
-# POLIMORFISMO
+# %% POLIMORFISMO
 """
     Polimorfismo refere-se a habilidade de um mesmo NOME de atributo, ou método, existir dentro de diferentes
     objetos da mesma classe, ou ainda de objetos de classes diferentes, e representarem VALORES ou AÇÕES
@@ -268,7 +271,7 @@ nene.brincar()
 nene.brincar_com()
 
 
-# ENCAPSULAMENTO
+# %% ENCAPSULAMENTO
 """
     Esta é uma prática da OOP para proteger, ou esconder, os atributos do objeto do acesso direto pelo usuário.
     Isso geralmente é feito através de métodos chamados "getters" e "setters", ou coletores e definidores,
@@ -312,7 +315,6 @@ pess = Pessoa("Guto", 22)
 pess.nome = 2
 
 
-
-# PARTE 5
+# %% PARTE 5
 
 # Um exemplo prático! Vamos CODAR???
